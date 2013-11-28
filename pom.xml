@@ -173,8 +173,8 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web-tools.git</connection>
-		<developerConnection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web-tools.git</developerConnection>
+		<connection>scm:git:https://www.github.com/Appverse/appverse-web-tools.git</connection>
+		<developerConnection>scm:git:https://www.github.com/Appverse/appverse-web-tools.git</developerConnection>
 		<tag>master</tag>
 		<url>https://github.com/Appverse/appverse-web</url>
 	</scm>
