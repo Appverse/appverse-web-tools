@@ -173,8 +173,8 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web.git</connection>
-		<developerConnection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web.git</developerConnection>
+		<connection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web-tools.git</connection>
+		<developerConnection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web-tools.git</developerConnection>
 		<tag>master</tag>
 		<url>https://github.com/Appverse/appverse-web</url>
 	</scm>
@@ -184,6 +184,9 @@
 		<module>archetype-generator</module>
 		<module>project-generator</module>				
 	</modules>
+        <properties>
+            <appverse.framework.version>1.3-RELEASE</appverse.framework.version>
+        </properties>
 
 	<build>
 		<defaultGoal>clean install</defaultGoal>
