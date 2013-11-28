@@ -12,7 +12,6 @@
 	<groupId>org.appverse.web.tools.archetypegenerator</groupId>
 	<artifactId>appverse-web-tools-archetype-generator</artifactId>
 	<packaging>maven-plugin</packaging>
-	<version>1.1.1-SNAPSHOT</version>
 
 	<name>Appverse Web Tools Archetype Generator Plugin</name>
 	<description>Appverse Web Tools Archeype Generator Plugin</description>

@@ -178,15 +178,15 @@
 		<tag>master</tag>
 		<url>https://github.com/Appverse/appverse-web</url>
 	</scm>
+        <properties>
+            <appverse.framework.version>1.3-RELEASE</appverse.framework.version>
+        </properties>
 
 	<modules>
 		<module>jpa-ddl-generator</module>
 		<module>archetype-generator</module>
 		<module>project-generator</module>				
 	</modules>
-        <properties>
-            <appverse.framework.version>1.3-RELEASE</appverse.framework.version>
-        </properties>
 
 	<build>
 		<defaultGoal>clean install</defaultGoal>
@@ -203,67 +203,4 @@
 		</plugins>
 	</build>
 
-	<!--<reporting>
-		<outputDirectory>${basedir}/target/site</outputDirectory>
-		<plugins>
-			<plugin>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>index</report>
-							<report>summary</report>
-							<report>license</report>
-							<report>project-team</report>
-							<report>mailing-list</report>
-							<report>scm</report>
-							<report>issue-tracking</report>
-							<report>cim</report>
-							<report>modules</report>
-							<report>plugins</report>
-							<report>plugin-management</report>
-							<report>help</report>
-							<report>dependencies</report>
-							<report>dependency-convergence</report>
-							<report>dependency-info</report>
-							<report>dependency-management</report>
-							<report>distribution-management</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-			<plugin>
-				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.14</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.10</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jxr-plugin</artifactId>
-				<version>2.3</version>
-			</plugin>
-		</plugins>
-	</reporting>-->
-
-<!-- 	<distributionManagement> -->
-<!-- 		<site> -->
-<!-- 			<id>appverse.web.maven</id> -->
-<!-- 			<name>Appverse Web Maven Site</name> -->
-<!-- 			<url>http://appverse.github.com/appverse-web/site/tools</url> -->
-<!-- 		</site> -->
-<!-- 	</distributionManagement> -->
 </project>
