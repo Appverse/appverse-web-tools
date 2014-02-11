@@ -1,0 +1,15 @@
+package ${P2B_CONVERTER_PACKAGE};
+
+import org.appverse.web.framework.backend.api.converters.AbstractDozerP2BBeanConverter;
+import org.springframework.stereotype.Component;
+${P2B_CONVERTER_IMPORTS}
+
+@Component("${P2B_CONVERTER_BEAN_NAME}")
+public class ${P2B_CONVERTER_CLASS_NAME} extends
+    AbstractDozerP2BBeanConverter<${P2B_CONVERTER_VO_BEAN_NAME}, ${P2B_CONVERTER_BUSINESS_BEAN_NAME}> {
+
+    public ${P2B_CONVERTER_CLASS_NAME}() {
+        setScopes("${P2B_CONVERTER_SCOPE_NAME}-p2b");
+        setBeanClasses(${P2B_CONVERTER_VO_BEAN_NAME}.class, ${P2B_CONVERTER_BUSINESS_BEAN_NAME}.class);
+    }
+}

@@ -1,0 +1,17 @@
+package ${BUSINESS_IMPL_PACKAGE};
+
+import org.appverse.web.framework.backend.api.services.business.AbstractBusinessService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+${ADDITIONAL_IMPORTS}
+
+@Service("${BUSINESS_SERVICE_NAME}")
+public class ${BUSINESS_SERVICE_CLASS_NAME} extends AbstractBusinessService implements ${BUSINESS_INTERFACE_NAME} {
+
+${BUSINESS_SERVICE_INJECTION}
+${BUSINESS_CONVERTERS_INJECTION}
+
+${BUSINESS_IMPL_BODY_CONTENT}
+
+}

@@ -1,0 +1,34 @@
+package ${MODEL_REPOSITORY_PACKAGE};
+
+import java.io.Serializable;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
+import javax.persistence.Version;
+
+import org.appverse.web.framework.backend.persistence.model.integration.AbstractIntegrationAuditedJPABean;
+
+@Entity
+@Table(name = "${MODEL_REPOSITORY_ENTITY_NAME}")
+public class ${MODEL_REPOSITORY_CLASS_NAME} extends AbstractIntegrationAuditedJPABean implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+${MODEL_REPOSITORY_FIELDS}
+
+
+    public ${MODEL_REPOSITORY_CLASS_NAME}() {
+    }
+
+//GET METHODS SHOULD BE ANNOTATED WITH JPA ANNOTATIONS.
+//FOR THAT PURPOSE IMPORTS ARE ALREADY SET
+
+${MODEL_REPOSITORY_METHODS}
+
+}

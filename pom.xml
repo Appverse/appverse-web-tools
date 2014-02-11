@@ -184,8 +184,9 @@
 	<modules>
 		<module>jpa-ddl-generator</module>
 		<module>archetype-generator</module>
-		<module>project-generator</module>				
-	</modules>
+		<module>project-generator</module>
+        <module>code-generator</module>
+    </modules>
 
 	<build>
 		<defaultGoal>clean install</defaultGoal>

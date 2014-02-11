@@ -1,0 +1,23 @@
+package ${PRESENTATION_IMPL_PACKAGE};
+
+import ${PRESENTATION_INTERFACE_FQFD};
+
+import org.appverse.web.framework.backend.api.services.presentation.AbstractPresentationService;
+
+${ADDITIONAL_IMPORTS}
+
+
+import org.springframework.stereotype.Service;
+
+
+@Service("${SERVICE_NAME}")
+public class ${PRESENTATION_IMPL_NAME} extends AbstractPresentationService implements ${PRESENTATION_INTERFACE} {
+
+${BUSINESS_SERVICE_INJECTION}
+${BUSINESS_CONVERTERS_INJECTION}
+
+    public ${PRESENTATION_IMPL_NAME}() {
+    }
+
+${PRESENTATION_BODY_CONTENT}
+}

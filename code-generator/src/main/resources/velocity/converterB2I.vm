@@ -1,0 +1,15 @@
+package ${B2I_CONVERTER_PACKAGE};
+
+import org.appverse.web.framework.backend.api.converters.AbstractDozerB2IBeanConverter;
+import org.springframework.stereotype.Component;
+${B2I_CONVERTER_IMPORTS}
+
+@Component("${B2I_CONVERTER_BEAN_NAME}")
+public class ${B2I_CONVERTER_CLASS_NAME} extends
+    AbstractDozerB2IBeanConverter<${B2I_CONVERTER_BUSINESS_BEAN_NAME}, ${B2I_CONVERTER_INTEGRATION_BEAN_NAME}> {
+
+    public ${B2I_CONVERTER_CLASS_NAME}() {
+        setScopes("${B2I_CONVERTER_SCOPE_NAME}-b2i-complete", "${B2I_CONVERTER_SCOPE_NAME}-b2i-without-dependencies");
+        setBeanClasses(${B2I_CONVERTER_BUSINESS_BEAN_NAME}.class, ${B2I_CONVERTER_INTEGRATION_BEAN_NAME}.class);
+    }
+}

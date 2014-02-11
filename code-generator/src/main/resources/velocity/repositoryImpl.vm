@@ -1,0 +1,16 @@
+package ${REPOSITORY_IMPLEMENTATION_PACKAGE};
+
+import org.appverse.web.framework.backend.api.helpers.log.AutowiredLogger;
+import org.appverse.web.framework.backend.persistence.services.integration.impl.live.JPAPersistenceService;
+import org.slf4j.Logger;
+import org.springframework.stereotype.Repository;
+${ADDITIONAL_IMPORTS}
+
+@Repository("${REPOSITORY_NAME}")
+public class ${REPOSITORY_IMPLEMENTATION_NAME} extends JPAPersistenceService<${REPOSITORY_BEAN_NAME}>
+    implements ${REPOSITORY_INTERFACE_NAME} {
+
+    @AutowiredLogger
+    private static Logger logger;
+
+}

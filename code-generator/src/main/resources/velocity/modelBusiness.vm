@@ -1,0 +1,16 @@
+package ${MODEL_BUSINESS_PACKAGE};
+
+//should we allow to choose between AbstractBusinessAuditedBean and AbstractBusinessBean¿?
+
+import org.appverse.web.framework.backend.api.model.business.AbstractBusinessAuditedBean;
+${ADDITIONAL_IMPORTS}
+
+public class ${MODEL_BUSINESS_NAME} extends AbstractBusinessAuditedBean {
+
+    private static final long serialVersionUID = 92981844901681239L;
+
+${MODEL_BUSINESS_FIELDS}
+
+
+${MODEL_BUSINESS_METHODS}
+}
