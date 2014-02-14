@@ -126,4 +126,8 @@ public abstract class AbstractCreator {
         }
     }
 
+    public String getGeneratedInfo() {
+        return "Generated file ["+getOutputFile().getAbsolutePath()+"]";
+    }
+
 }

@@ -101,11 +101,12 @@ public class ServiceCodeMojo extends AbstractMojo {
                         /*genBusinessService*/true, /*genIntegrationService*/true,
                         /*genBusinessModel*/true, /*genIntegrationModel*/true,
                         /*genP2BConfig*/true, /*genB2IConfig*/true, serviceContext);
-
+                StringBuilder sb = new StringBuilder(" LIST OF GENERATED FILES: \n");
                 List<AbstractServiceCreator> creatorList = factory.getServiceCreators();
                 for( AbstractServiceCreator creator: creatorList) {
                     creator.build();
                     creator.saveFile();
+                    sb.append(creator.getGeneratedInfo()).append("\n");
                 }
                 //System.out.println("Service Context mod");
                 //System.out.println(serviceContext);
@@ -116,6 +117,7 @@ public class ServiceCodeMojo extends AbstractMojo {
                 for( AbstractServiceCreator creator: integrationList) {
                     creator.build();
                     creator.saveFile();
+                    sb.append(creator.getGeneratedInfo()).append("\n");
                 }
 
                 //serviceContext has a Map with all Presentation beans that needs to be created
@@ -127,7 +129,9 @@ public class ServiceCodeMojo extends AbstractMojo {
                 for( AbstractModelCreator creator: creatorModelList) {
                     creator.build();
                     creator.saveFile();
+                    sb.append(creator.getGeneratedInfo()).append("\n");
                 }
+                logger.info(sb.toString());
 
             } finally {
                 Thread.currentThread().setContextClassLoader(tccl);
