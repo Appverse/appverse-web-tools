@@ -44,6 +44,9 @@ public class ServiceCodeMojo extends AbstractMojo {
     private String srcOutputDir;
 
 
+    //After some feedback from contributors, it seems that it has no sense to make it much configurable.
+    //the idea is that the user will be able to copy or not the generated sources.
+    /*
     @Parameter(property="genPresentationService",defaultValue="true", required = true)
     private Boolean genPresentationService;
 
@@ -64,7 +67,7 @@ public class ServiceCodeMojo extends AbstractMojo {
 
     @Parameter(property="genB2IConfig",defaultValue="false")
     private Boolean genB2IConfig;
-
+    */
     @Parameter(property="presentationServiceSuffix",defaultValue="ServiceFacade")
     public static String presentationSuffix;
 
@@ -94,18 +97,18 @@ public class ServiceCodeMojo extends AbstractMojo {
                 Method[] methodList = cl.getMethods();
                 serviceContext.setPresentationInterfaceMethods(methodList);
                 AbstractServiceFactory factory = AbstractServiceFactory.getFactory(
-                        genPresentationService,
-                        genBusinessService, genIntegrationService,
-                        genBusinessModel, genIntegrationModel,
-                        genP2BConfig, genB2IConfig, serviceContext);
+                        /*genPresentationService*/true,
+                        /*genBusinessService*/true, /*genIntegrationService*/true,
+                        /*genBusinessModel*/true, /*genIntegrationModel*/true,
+                        /*genP2BConfig*/true, /*genB2IConfig*/true, serviceContext);
 
                 List<AbstractServiceCreator> creatorList = factory.getServiceCreators();
                 for( AbstractServiceCreator creator: creatorList) {
                     creator.build();
                     creator.saveFile();
                 }
-                System.out.println("Service Context mod");
-                System.out.println(serviceContext);
+                //System.out.println("Service Context mod");
+                //System.out.println(serviceContext);
 
                 //Integration are obtained from different sources...
 

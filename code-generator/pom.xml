@@ -12,8 +12,8 @@
     <artifactId>appverse-web-tools-code-generator</artifactId>
     <packaging>maven-plugin</packaging>
 
-    <name>Appverse Web Tools Code Generator Tests</name>
-    <description>Appverse Web Tools Code Generator tests</description>
+    <name>Appverse Web Tools Code Generator Maven Plugin</name>
+    <description>Appverse Web Tools Code Generator Maven Plugin</description>
     <url>http://appverse.org/projects/appverse-web/</url>
     <inceptionYear>2013</inceptionYear>
 
