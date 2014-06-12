@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.maven.plugin.my.unit</groupId>
+  <artifactId>project-to-test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Test MyMojo</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jax-ws-commons</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<!-- Default path. -->
+					<bindingDirectory>${basedir}/src/jaxws</bindingDirectory>
+					<packageName>org.appverse.web.showcases.ws.client</packageName>
+					<sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+					<xnocompile>true</xnocompile>
+					<verbose>true</verbose>
+					<extension>true</extension>
+					<target>2.1</target>
+					<wsdlDirectory>${basedir}/src/test/resources/wsdl</wsdlDirectory>
+					<wsdlFiles>
+						<wsdlFile>account.wsdl</wsdlFile>
+					</wsdlFiles> 
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>jax-ws-client-stub-maven-plugin</artifactId>
+				<configuration>	 
+					<remoteWsdl>http://localhost:9999/ws/AccountService?wsdl</remoteWsdl> 
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
