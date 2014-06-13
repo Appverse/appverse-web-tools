@@ -1,0 +1,15 @@
+<project>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>jax-ws-client-stub-generator</artifactId>
+        <configuration>
+          <overwrite>true</overwrite>
+          <remoteWsdl>http://localhost:9999/ws/AccountService?wsdl</remoteWsdl> 
+          <wsdlPath>wsdl/account.wsdl</wsdlPath>   
+          <packageName>org.appverse.web.framework.backend.ws.client.stub.live</packageName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
