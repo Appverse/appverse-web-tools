@@ -178,7 +178,7 @@
 		<url>https://github.com/Appverse/appverse-web</url>
 	</scm>
         <properties>
-            <appverse.framework.version>1.3-RELEASE</appverse.framework.version>
+            <appverse.framework.version>1.4-SNAPSHOT</appverse.framework.version>
         </properties>
 
 	<modules>
@@ -186,6 +186,7 @@
 		<module>archetype-generator</module>
 		<module>project-generator</module>
         <module>code-generator</module>
+        <module>jax-ws-client-stub-generator</module>
     </modules>
 
 	<build>
