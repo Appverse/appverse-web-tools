@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.appverse.web.tools.poms</groupId>
         <artifactId>appverse-web-tools-pom</artifactId>
-        <version>1.4-RELEASE</version>
+        <version>1.4.1-SNAPSHOT</version>
     </parent>
 
     <groupId>org.appverse.web.tools.codegenerator</groupId>
@@ -173,7 +173,7 @@
     <scm>
         <connection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web.git</connection>
         <developerConnection>scm:git:https://${appverseweb.user.name}:${appverseweb.user.password}@github.com/Appverse/appverse-web.git</developerConnection>
-        <tag>appverse-web-tools-pom-1.4-RELEASE</tag>
+        <tag>master</tag>
         <url>https://github.com/Appverse/appverse-web</url>
     </scm>
 
