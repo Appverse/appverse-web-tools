@@ -178,7 +178,7 @@
 		<url>https://github.com/Appverse/appverse-web</url>
 	</scm>
         <properties>
-            <appverse.framework.version>1.4-SNAPSHOT</appverse.framework.version>
+            <appverse.framework.version>1.4-RELEASE</appverse.framework.version>
         </properties>
 
 	<modules>
