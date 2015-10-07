@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.appverse.web.tools.poms</groupId>
         <artifactId>appverse-web-tools-pom</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.5.3-SNAPSHOT</version>
     </parent>
 
 	<groupId>org.appverse.web.tools.jaxws.client</groupId>
@@ -63,12 +63,10 @@
 		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
-			<version>1.6.3</version>
 		</dependency> 
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-xjc</artifactId>
-			<version>2.1.6</version>
 		</dependency> 
         <dependency>
             <groupId>com.thoughtworks.qdox</groupId>
