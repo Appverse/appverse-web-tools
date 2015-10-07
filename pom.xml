@@ -10,7 +10,7 @@
 
 	<groupId>org.appverse.web.tools.poms</groupId>
 	<artifactId>appverse-web-tools-pom</artifactId>
-	<version>1.5.2-SNAPSHOT</version>
+	<version>1.5.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Appverse Web Tools POM</name>
@@ -178,7 +178,7 @@
 		<url>https://github.com/Appverse/appverse-web</url>
 	</scm>
         <properties>
-            <appverse.framework.version>1.5.2-SNAPSHOT</appverse.framework.version>
+            <appverse.framework.version>1.5.3-SNAPSHOT</appverse.framework.version>
         </properties>
 
 	<modules>
