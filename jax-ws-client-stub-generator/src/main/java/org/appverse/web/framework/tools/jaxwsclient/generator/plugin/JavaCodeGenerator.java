@@ -120,12 +120,12 @@ public class JavaCodeGenerator {
 				// do what you have to do with the method  
 				JMethod jmCreate;
 				JMethod jmCreateMock;
-				if (!method.getReturns().getFullQualifiedName().contains(".")) { 
-					JClass reference = jCodeModel.ref(pkg.getName() + "." + method.getReturns().getFullQualifiedName());  
+				if (!method.getReturnType().getFullyQualifiedName().contains(".")) { 
+					JClass reference = jCodeModel.ref(pkg.getName() + "." + method.getReturnType().getFullyQualifiedName());  
 					jmCreate = jc.method(JMod.PUBLIC, reference, method.getName());  
 					jmCreateMock = jcMock.method(JMod.PUBLIC, reference, method.getName());  
 				} else { 	    	
-					JClass reference2 = jCodeModel.ref( method.getReturns().getFullQualifiedName());	    	 
+					JClass reference2 = jCodeModel.ref( method.getReturnType().getFullyQualifiedName());	    	 
 					jmCreate = jc.method(JMod.PUBLIC, reference2, method.getName()); 
 					jmCreateMock = jcMock.method(JMod.PUBLIC, reference2, method.getName());  
 				}
@@ -134,8 +134,8 @@ public class JavaCodeGenerator {
 				List<String> plist = new ArrayList<String>();
 				for (JavaParameter p : params) { 
 					plist.add(p.getName());
-					jmCreate.param(jCodeModel.ref(p.getType().getFullQualifiedName()), p.getName());	
-					jmCreateMock.param(jCodeModel.ref(p.getType().getFullQualifiedName()), p.getName());
+					jmCreate.param(jCodeModel.ref(pkg.getName() + "." + p.getType().getFullyQualifiedName()), p.getName());	
+					jmCreateMock.param(jCodeModel.ref(pkg.getName() + "." + p.getType().getFullyQualifiedName()), p.getName());
 				} 		    
 				jmCreate._throws(Exception.class);  
 				jmCreateMock._throws(Exception.class);
@@ -160,4 +160,7 @@ public class JavaCodeGenerator {
 			e.printStackTrace();
 		} 
 	} 
+	
+	
+	// http://stackoverflow.com/questions/30800034/add-import-using-code-model
 }
