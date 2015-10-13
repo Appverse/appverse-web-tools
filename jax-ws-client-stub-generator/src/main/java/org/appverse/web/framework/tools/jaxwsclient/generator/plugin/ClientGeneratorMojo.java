@@ -120,9 +120,9 @@ public class ClientGeneratorMojo extends AbstractMojo {
 		getLog().info( "Service: " + serviceClass); 
 		Map<String,String> args = new HashMap <String, String>();
 		args.put(JavaCodeGenerator.PACKAGE_NAME, config.get(PACKAGE_NAME));
-		args.put(JavaCodeGenerator.CLASS_NAME, serviceClass + "Client");
-		args.put(JavaCodeGenerator.SERVICE_NAME, serviceClass);
-		args.put(JavaCodeGenerator.INTERFACE_NAME, interfaceClass);
+		args.put(JavaCodeGenerator.CLASS_NAME, capitalize(serviceClass + "Client"));
+		args.put(JavaCodeGenerator.SERVICE_NAME, capitalize(serviceClass));
+		args.put(JavaCodeGenerator.INTERFACE_NAME, capitalize(interfaceClass));
 		args.put(JavaCodeGenerator.REMOTEWSDL, remoteWsdl); 
 		args.put(JavaCodeGenerator.SPRING, String.valueOf(springService));
 		args.put(JavaCodeGenerator.DESTDIR,config.get(DEST_DIR));  
@@ -151,4 +151,9 @@ public class ClientGeneratorMojo extends AbstractMojo {
     	} 
     	return value; 
     }
+    
+	private String capitalize(String stringToCapitazile){
+		if (stringToCapitazile.isEmpty()) return stringToCapitazile;
+		return stringToCapitazile.substring(0, 1).toUpperCase() + stringToCapitazile.substring(1);
+	}
 }
